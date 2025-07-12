@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MindMerge AI Chat Helper</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-gradient-custom {
+            background-image: linear-gradient(to right, #6A5AF9, #D655A1);
+        }
+    </style>
+</head>
+<body class="bg-gray-800 text-white">
+<div class="flex h-screen bg-gray-900 p-4">
+<aside class="flex flex-col w-64 bg-gray-800 rounded-xl p-4 space-y-6">
+<div class="flex items-center space-x-3 px-2">
+<img alt="MindMerge logo" class="w-8 h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXMBi-LZWZqbBEnuK6U_ITphti3diWJ4QcWOzVjd4SfWwHva-lBEE2GD5TogdtkJ9lqSyoQaUYmrgA4EICd0qQnTBFEDGqxtRMYSb-IoWpr9qpPh5mn13CxYSRPk9wDscpgWhiomD_aDkRjC0FAeFlcCor44EZH9NxK8AEtR-efAwIRarzaAIcHbkGqXdf0ucRkKYJO7tdbp8unZ_sR3VrVtckcOGdQzJYkWy6KjjoQ-pWORCqhwQXl4eec-7_K_yA8QAlY0qdd_U"/>
+<span class="text-xl font-bold">MindMerge</span>
+</div>
+<nav class="flex-grow">
+<ul class="space-y-2">
+<li>
+<a class="flex items-center space-x-3 bg-gray-700 text-white py-2 px-4 rounded-lg" href="#">
+<i class="material-icons">chat</i>
+<span>AI Chat Helper</span>
+</a>
+</li>
+<li>
+<a class="flex items-center space-x-3 text-gray-400 hover:bg-gray-700 py-2 px-4 rounded-lg" href="#">
+<i class="material-icons">dashboard</i>
+<span>Templates</span>
+<span class="text-xs font-semibold bg-yellow-500 text-gray-900 px-2 py-0.5 rounded-md ml-auto">PRO</span>
+</a>
+</li>
+<li>
+<a class="flex items-center space-x-3 text-gray-400 hover:bg-gray-700 py-2 px-4 rounded-lg" href="#">
+<i class="material-icons">folder</i>
+<span>My Projects</span>
+<span class="text-xs font-semibold bg-yellow-500 text-gray-900 px-2 py-0.5 rounded-md ml-auto">PRO</span>
+</a>
+</li>
+<li>
+<a class="flex items-center space-x-3 text-gray-400 hover:bg-gray-700 py-2 px-4 rounded-lg" href="#">
+<i class="material-icons">bar_chart</i>
+<span>Statistics</span>
+<span class="text-xs font-semibold bg-yellow-500 text-gray-900 px-2 py-0.5 rounded-md ml-auto">PRO</span>
+</a>
+</li>
+<li>
+<a class="flex items-center space-x-3 text-gray-400 hover:bg-gray-700 py-2 px-4 rounded-lg" href="#">
+<i class="material-icons">settings</i>
+<span>Settings</span>
+</a>
+</li>
+<li>
+<a class="flex items-center space-x-3 text-gray-400 hover:bg-gray-700 py-2 px-4 rounded-lg" href="#">
+<i class="material-icons">help_outline</i>
+<span>Updates &amp; FAQ</span>
+</a>
+</li>
+</ul>
+</nav>
+<div class="border-t border-gray-700 pt-4 mt-auto">
+<a class="flex items-center space-x-3 text-gray-400 hover:bg-gray-700 py-2 px-4 rounded-lg" href="#">
+<i class="material-icons">logout</i>
+<span>Log out</span>
+</a>
+</div>
+</aside>
+<main class="flex-1 bg-white text-gray-900 rounded-xl mx-4 p-6 flex flex-col">
+<header class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-4">
+<button class="hidden"><i class="material-icons text-gray-500">menu</i></button>
+<h1 class="text-2xl font-bold text-gray-800">AI Chat Helper</h1>
+</div>
+<div class="flex items-center space-x-4">
+<div class="relative">
+<i class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">search</i>
+<input class="bg-gray-100 rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Search" type="text"/>
+</div>
+<button class="p-2 rounded-lg hover:bg-gray-100">
+<i class="material-icons text-gray-500">content_copy</i>
+</button>
+<button class="p-2 rounded-lg hover:bg-gray-100">
+<i class="material-icons text-gray-500">history</i>
+</button>
+</div>
+</header>
+<div class="flex-grow overflow-y-auto pr-2">
+<div class="bg-gray-800 rounded-xl p-4">
+<div class="flex justify-between items-center mb-4">
+<div class="flex space-x-1 border-b border-gray-700">
+<button class="px-4 py-2 text-gray-400 hover:text-white">HTML</button>
+<button class="px-4 py-2 text-gray-400 hover:text-white">CSS</button>
+<button class="px-4 py-2 text-white border-b-2 border-indigo-500">JS</button>
+</div>
+<button class="flex items-center space-x-2 text-gray-400 hover:text-white">
+<i class="material-icons text-sm">content_copy</i>
+<span>Copy code</span>
+</button>
+</div>
+<pre class="text-sm"><code><span class="text-gray-500"> 1 </span><span class="text-blue-400">let</span> cancelButton = <span class="text-blue-400">document</span>.getElementById(<span class="text-green-400">"cancel-button"</span>);
+<span class="text-gray-500"> 2 </span><span class="text-blue-400">let</span> endButton = <span class="text-blue-400">document</span>.getElementById(<span class="text-green-400">"send-button"</span>);
+<span class="text-gray-500"> 3 </span>
+<span class="text-gray-500"> 4 </span>cancelButton.addEventListener(<span class="text-green-400">"click"</span>, <span class="text-blue-400">function</span>() {
+<span class="text-gray-500"> 5 </span>    <span class="text-purple-400">console</span>.log(<span class="text-green-400">"Cancel button clicked"</span>);
+<span class="text-gray-500"> 6 </span>});
+<span class="text-gray-500"> 7 </span>
+<span class="text-gray-500"> 8 </span>sendButton.addEventListener(<span class="text-green-400">"click"</span>, <span class="text-blue-400">function</span>() {
+<span class="text-gray-500"> 9 </span>    <span class="text-purple-400">console</span>.log(<span class="text-green-400">"Send button clicked"</span>);
+<span class="text-gray-500">10 </span>});</code></pre>
+</div>
+<div class="text-sm text-gray-500 bg-gray-50 rounded-lg p-4 my-4">
+                    Note: This is just an example of a simple HTML form. In a real-world scenario, you would also want to include proper validation and handling of the form data on the server side.
+                </div>
+<div class="flex items-center justify-between bg-gray-100 rounded-lg p-4 my-4">
+<span>I have created a project in your Codepen account</span>
+<div class="flex items-center space-x-2">
+<button class="bg-gray-200 text-gray-800 py-1 px-3 rounded-lg text-sm">View</button>
+<button class="p-1 rounded-full hover:bg-gray-200"><i class="material-icons text-sm">thumb_up</i></button>
+<button class="p-1 rounded-full hover:bg-gray-200"><i class="material-icons text-sm">thumb_down</i></button>
+<button class="p-1 rounded-full hover:bg-gray-200"><i class="material-icons text-sm">content_copy</i></button>
+</div>
+</div>
+<div class="text-center my-6">
+<button class="bg-gray-200 text-gray-800 py-2 px-4 rounded-lg text-sm flex items-center mx-auto">
+<i class="material-icons text-sm mr-2">refresh</i>
+                        Regenerate response
+                    </button>
+</div>
+</div>
+<div class="mt-auto">
+<div class="relative">
+<textarea class="w-full bg-gray-100 rounded-lg p-4 pr-28 resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Start typing..." rows="1"></textarea>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 flex items-center space-x-2">
+<button class="p-2 rounded-full hover:bg-gray-200"><i class="material-icons text-gray-500">mic</i></button>
+<button class="p-2 rounded-full hover:bg-gray-200"><i class="material-icons text-gray-500">attach_file</i></button>
+<button class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white">
+<i class="material-icons">send</i>
+</button>
+</div>
+</div>
+<p class="text-xs text-center text-gray-400 mt-2">Free Research Preview. ChatGPT may produce inaccurate information about people, places, or facts. <a class="text-blue-500" href="#">ChatGPT May 12 Version</a></p>
+</div>
+</main>
+<aside class="w-80 bg-white text-gray-900 rounded-xl p-6 flex flex-col">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-xl font-bold">History</h2>
+<span class="text-sm text-gray-500">6/50</span>
+</div>
+<div class="flex-grow space-y-6 overflow-y-auto">
+<div>
+<h3 class="font-semibold mb-2">Create welcome form</h3>
+<p class="text-sm text-gray-500 border-l-2 border-indigo-500 pl-3">Write code (HTML, CSS and JS) for a simple...</p>
+</div>
+<div>
+<h3 class="font-semibold mb-2">Instructions</h3>
+<p class="text-sm text-gray-500 pl-3">How to set up a Wi-Fi wireless network?</p>
+</div>
+<div>
+<h3 class="font-semibold mb-2">Career</h3>
+<p class="text-sm text-gray-500 pl-3">How to organise your working day effectively?</p>
+</div>
+<div>
+<h3 class="font-semibold mb-2">Career</h3>
+<p class="text-sm text-gray-500 pl-3">Tips to improve productivity at work</p>
+</div>
+<div>
+<h3 class="font-semibold mb-2">Onboarding</h3>
+<p class="text-sm text-gray-500 pl-3">How does artificial intelligence work?</p>
+</div>
+<div>
+<h3 class="font-semibold mb-2">Onboarding</h3>
+<p class="text-sm text-gray-500 pl-3">What can you do?</p>
+</div>
+</div>
+<div class="mt-6">
+<button class="w-full bg-gray-100 text-gray-800 py-2 rounded-lg flex items-center justify-center space-x-2 hover:bg-gray-200">
+<i class="material-icons text-sm">delete_outline</i>
+<span>Clear history</span>
+</button>
+</div>
+</aside>
+</div>
+</body></html>
