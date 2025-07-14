@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MindMerge AI Chat Helper</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-gradient-pro {
+            background-image: linear-gradient(to right, #6B46C1, #4299E1);
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-800 text-white">
+<div class="flex h-screen p-4">
+<aside class="w-64 bg-gray-900 rounded-xl flex flex-col p-4 space-y-4">
+<div class="flex items-center space-x-2">
+<img alt="MindMerge Logo" class="w-8 h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAA803quPxkJOlpBXWspxsltWuLO4WmdZX3eLA-SUBWbDNq6M-hggcoG6YzyA_HHSm8r8BqG5umBelt-OZAnzGr8uoD2XdUZJ6-t6MoHeykD9frzRUaHTjY-LLV-GcKLWq0oyFpZbFz0Z3oJd7oKka9ti5ymimQ5QrAoRVAq4o8Y1BBi_i8MMJR9z2Fhwr2uDKWOoizm86ddlijeyO7UH-o1Feo7W6uLwJ9PF6tyCvEosfO5-bkFU91siKnVRE5AMwhxBNWJthCBQn"/>
+<span class="text-xl font-bold">MindMerge</span>
+<span class="material-icons text-gray-400 ml-auto">menu</span>
+</div>
+<nav class="flex-grow space-y-2">
+<a class="flex items-center px-4 py-2 bg-gray-700 rounded-lg text-white" href="#">
+<span class="material-icons mr-3">chat</span> AI Chat Helper
+                </a>
+<a class="flex items-center px-4 py-2 text-gray-400 hover:bg-gray-700 rounded-lg" href="#">
+<span class="material-icons mr-3">space_dashboard</span> Templates <span class="ml-auto bg-yellow-500 text-xs text-black font-bold px-2 py-1 rounded">PRO</span>
+</a>
+<a class="flex items-center px-4 py-2 text-gray-400 hover:bg-gray-700 rounded-lg" href="#">
+<span class="material-icons mr-3">folder</span> My Projects <span class="ml-auto bg-yellow-500 text-xs text-black font-bold px-2 py-1 rounded">PRO</span>
+</a>
+<a class="flex items-center px-4 py-2 text-gray-400 hover:bg-gray-700 rounded-lg" href="#">
+<span class="material-icons mr-3">bar_chart</span> Statistics <span class="ml-auto bg-yellow-500 text-xs text-black font-bold px-2 py-1 rounded">PRO</span>
+</a>
+<a class="flex items-center px-4 py-2 text-gray-400 hover:bg-gray-700 rounded-lg" href="#">
+<span class="material-icons mr-3">settings</span> Settings
+                </a>
+<a class="flex items-center px-4 py-2 text-gray-400 hover:bg-gray-700 rounded-lg" href="#">
+<span class="material-icons mr-3">help_outline</span> Updates &amp; FAQ
+                </a>
+</nav>
+<div class="bg-gradient-pro p-4 rounded-xl text-center">
+<h3 class="text-lg font-bold">Pro Plan</h3>
+<p class="text-sm mt-1">Strengthen artificial intelligence, get plan!</p>
+<div class="flex justify-between items-center mt-4">
+<span class="text-lg font-bold">$10 / mo</span>
+<button class="bg-white text-purple-700 font-semibold px-4 py-2 rounded-lg text-sm">Get</button>
+</div>
+</div>
+<a class="flex items-center px-4 py-2 text-gray-400 hover:bg-gray-700 rounded-lg" href="#">
+<span class="material-icons mr-3">logout</span> Log out
+            </a>
+</aside>
+<main class="flex-1 bg-gray-900 mx-4 rounded-xl flex flex-col p-6">
+<header class="flex items-center mb-6">
+<h1 class="text-2xl font-bold">AI Chat Helper</h1>
+<div class="flex items-center ml-auto bg-gray-800 rounded-lg px-3">
+<span class="material-icons text-gray-400">search</span>
+<input class="bg-transparent text-white placeholder-gray-400 focus:outline-none p-2 w-48" placeholder="Search" type="text"/>
+</div>
+<div class="flex items-center space-x-4 ml-4">
+<button class="text-gray-400 hover:text-white"><span class="material-icons">add_circle_outline</span></button>
+<button class="text-gray-400 hover:text-white"><span class="material-icons">content_copy</span></button>
+<button class="text-gray-400 hover:text-white"><span class="material-icons">more_horiz</span></button>
+</div>
+</header>
+<div class="flex-1 bg-white text-gray-800 rounded-xl flex flex-col p-6 overflow-y-auto scrollbar-hide">
+<div class="bg-gray-800 rounded-lg p-4">
+<div class="flex justify-between items-center mb-4">
+<div class="flex space-x-1">
+<button class="px-4 py-1 text-sm rounded-md text-gray-300 hover:bg-gray-700">HTML</button>
+<button class="px-4 py-1 text-sm rounded-md text-gray-300 hover:bg-gray-700">CSS</button>
+<button class="px-4 py-1 text-sm rounded-md text-white bg-gray-700 border-b-2 border-orange-500">JS</button>
+</div>
+<button class="flex items-center text-gray-300 text-sm hover:text-white">
+<span class="material-icons text-base mr-1">content_copy</span> Copy code
+                        </button>
+</div>
+<pre class="text-sm text-gray-300"><code class="language-js"><ol class="list-decimal list-inside"><li><span class="text-blue-400">let</span> cancelButton = <span class="text-purple-400">document</span>.<span class="text-yellow-400">getElementById</span>(<span class="text-green-400">"cancel-button"</span>);</li><li><span class="text-blue-400">let</span> sendButton = <span class="text-purple-400">document</span>.<span class="text-yellow-400">getElementById</span>(<span class="text-green-400">"send-button"</span>);</li><li></li><li>cancelButton.<span class="text-yellow-400">addEventListener</span>(<span class="text-green-400">"click"</span>, <span class="text-blue-400">function</span>() {</li><li>  <span class="text-purple-400">console</span>.log(<span class="text-green-400">"Cancel button clicked"</span>);</li><li>});</li><li></li><li>sendButton.<span class="text-yellow-400">addEventListener</span>(<span class="text-green-400">"click"</span>, <span class="text-blue-400">function</span>() {</li><li>  <span class="text-purple-400">console</span>.log(<span class="text-green-400">"Send button clicked"</span>);</li><li>});</li></ol></code></pre>
+</div>
+<div class="text-xs text-gray-500 bg-gray-100 p-3 rounded-lg my-4">
+                    Note: This is just an example of a simple HTML form. In a real-world scenario, you would also want to include proper validation and handling of the form data on the server side.
+                </div>
+<div class="flex justify-between items-center bg-gray-100 p-3 rounded-lg my-2">
+<p class="text-gray-700">I have created a project in your Codepen account</p>
+<button class="bg-white border border-gray-300 text-gray-700 px-4 py-1.5 rounded-lg text-sm font-medium hover:bg-gray-50">View</button>
+</div>
+<div class="flex items-center space-x-2 text-gray-500 mt-1">
+<button class="hover:text-gray-700"><span class="material-icons text-lg">thumb_up</span></button>
+<button class="hover:text-gray-700"><span class="material-icons text-lg">thumb_down</span></button>
+<button class="hover:text-gray-700"><span class="material-icons text-lg">content_copy</span></button>
+</div>
+<div class="mt-auto">
+<div class="text-center my-4">
+<button class="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-50">
+<span class="material-icons text-base align-middle mr-1">autorenew</span>
+                            Regenerate response
+                        </button>
+</div>
+<div class="relative">
+<textarea class="w-full bg-gray-100 border border-gray-200 rounded-lg p-4 pr-28 resize-none focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="Start typing" rows="1"></textarea>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center space-x-2">
+<button class="text-gray-500 hover:text-gray-700"><span class="material-icons">mic</span></button>
+<button class="text-gray-500 hover:text-gray-700"><span class="material-icons">attach_file</span></button>
+<button class="w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center hover:bg-orange-600">
+<span class="material-icons">send</span>
+</button>
+</div>
+</div>
+<p class="text-xs text-center text-gray-400 mt-2">Free Research Preview. Model may produce inaccurate information about people, places, or facts. <a class="text-blue-500 underline" href="#">Check our terms</a></p>
+</div>
+</div>
+</main>
+<aside class="w-72 bg-gray-900 rounded-xl flex flex-col p-4">
+<header class="flex justify-between items-center mb-6">
+<h2 class="text-xl font-bold">History</h2>
+<span class="text-sm text-gray-400">6/50</span>
+</header>
+<div class="flex-grow space-y-4 overflow-y-auto scrollbar-hide">
+<div>
+<h3 class="font-semibold text-gray-200 mb-2">Create welcome form</h3>
+<div class="relative pl-4 border-l-2 border-orange-500">
+<p class="text-sm text-gray-400">Write code (HTML, CSS and JS) for a simple...</p>
+</div>
+</div>
+<div>
+<h3 class="font-semibold text-gray-200 mb-2">Instructions</h3>
+<div class="relative pl-4">
+<p class="text-sm text-gray-400">How to set up a Wi-Fi wireless network?</p>
+</div>
+</div>
+<div>
+<h3 class="font-semibold text-gray-200 mb-2">Career</h3>
+<div class="relative pl-4">
+<p class="text-sm text-gray-400">How to organise your working day effectively?</p>
+</div>
+</div>
+<div>
+<h3 class="font-semibold text-gray-200 mb-2">Career</h3>
+<div class="relative pl-4">
+<p class="text-sm text-gray-400">Tips to improve productivity at work</p>
+</div>
+</div>
+<div>
+<h3 class="font-semibold text-gray-200 mb-2">Onboarding</h3>
+<div class="relative pl-4">
+<p class="text-sm text-gray-400">How does artificial intelligence work?</p>
+</div>
+</div>
+<div>
+<h3 class="font-semibold text-gray-200 mb-2">Onboarding</h3>
+<div class="relative pl-4">
+<p class="text-sm text-gray-400">What can you do?</p>
+</div>
+</div>
+</div>
+<button class="w-full text-center py-2 mt-4 text-gray-400 border border-gray-700 rounded-lg hover:bg-gray-800 text-sm">
+                Clear history
+            </button>
+</aside>
+</div>
+
+</body></html>
