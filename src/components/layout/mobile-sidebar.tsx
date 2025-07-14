@@ -4,7 +4,7 @@ import { useEffect } from "react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { X, MessageCircle, FileText, FolderOpen, Settings, Bell, LogOut } from "lucide-react"
+import { X, MessageCircle, FileText, FolderOpen, Settings, Bell, LogOut, type LucideIcon } from "lucide-react"
 
 interface MobileSidebarProps {
   isOpen: boolean
@@ -121,7 +121,7 @@ function SidebarItem({
   badge, 
   active = false 
 }: {
-  icon: any
+  icon: LucideIcon
   label: string
   badge?: string
   active?: boolean
